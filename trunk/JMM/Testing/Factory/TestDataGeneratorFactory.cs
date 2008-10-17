@@ -37,20 +37,17 @@ using JMM.Testing.DataProviders;
 
 namespace JMM.Testing.Factory
 {
-    namespace GrizzlyEngine.Test.Utility
+    public class TestDataGeneratorFactory
     {
-        public class TestDataGeneratorFactory
+        public static ITestDataProvider<T> CreateFor<T>()
         {
-            public static ITestDataProvider<T> CreateFor<T>()
+            if (typeof (T)
+                == typeof (DataTable))
             {
-                if (typeof (T)
-                    == typeof (DataTable))
-                {
-                    return (ITestDataProvider<T>) new DataTableTestDataProvider();
-                }
-
-                throw new NotImplementedException();
+                return (ITestDataProvider<T>) new DataTableTestDataProvider();
             }
+
+            throw new NotImplementedException();
         }
     }
 }

@@ -31,7 +31,7 @@
 
 #endregion
 
-using JMM.Testing.Factory.GrizzlyEngine.Test.Utility;
+using JMM.Testing.Factory;
 
 namespace JMM.Testing.Generators
 {
