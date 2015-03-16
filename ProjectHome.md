@@ -1,0 +1,1 @@
+Code snippets and files from the programmer blog from http://programmer.BrettVeenstra.com (JourneyManToMaster)
